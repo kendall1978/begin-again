@@ -1,12 +1,11 @@
----
-title: Home
-layout: layout.njk
----
+{% set title = 'Home' %}
+{% extends "layout.njk" %}
 
-<section>
-    <h1>Begin Again Ministries</h1>
-</section>
-
+{% block body %}
+<div class="my-20 space-y-20 md:space-y-40">
+    {% include 'sections/who-are-we.njk' %}
+</div>
+{% endblock %}
 {# {% set title = 'Home' %}
 {% extends "layout.njk" %}
 

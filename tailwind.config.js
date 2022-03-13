@@ -8,6 +8,10 @@ module.exports = {
             meetupRed: "#E42143",
             discordPurple: "#6D86D7"
         },
+        fontFamily: {
+            'sans': ['Open Sans', 'sans-serif'],
+            'mono': ['Inconsolata', 'sans-serif']
+        },
         container: {
             center: true,
         },

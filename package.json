@@ -1,31 +1,49 @@
 {
-  "name": "begin-again",
+  "name": "opensgf",
   "version": "1.0.0",
+  "description": "A starter template for the TEA stack.",
   "main": "index.js",
   "scripts": {
-    "build": "cross-env NODE_ENV=production npm-run-all clean -p build:*",
-    "build:eleventy": "eleventy",
-    "build:webpack": "webpack",
-    "clean": "rimraf dist",
-    "start": "npm-run-all -s clean -p start:webpack start:eleventy",
-    "start:eleventy": "eleventy --serve --quiet",
-    "start:webpack": "webpack --watch"
+      "build": "npm-run-all -s clean build:webpack build:eleventy",
+      "build:eleventy": "cross-env NODE_ENV=production eleventy",
+      "build:webpack": "cross-env NODE_ENV=production webpack",
+      "clean": "rimraf dist",
+      "start": "npm-run-all -s clean -p start:webpack start:eleventy",
+      "start:eleventy": "eleventy --serve --quiet",
+      "start:webpack": "webpack --watch"
   },
+  "keywords": [
+      "eleventy",
+      "tailwind",
+      "alpine"
+  ],
   "dependencies": {
-    "@11ty/eleventy": "^1.0.0",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^4.0.0",
-    "autoprefixer": "^10.4.2",
-    "cross-env": "^7.0.3",
-    "css-loader": "^6.7.0",
-    "mini-css-extract-plugin": "^2.6.0",
-    "npm-run-all": "^4.1.5",
-    "postcss": "^8.4.7",
-    "postcss-import": "^14.0.2",
-    "postcss-loader": "^6.2.1",
-    "webpack": "^5.70.0",
-    "webpack-cli": "^4.9.2"
+      "alpinejs": "^2.8.0",
+      "gumshoejs": "^5.1.2",
+      "smooth-scroll-into-view-if-needed": "^1.1.29",
+      "throttle-debounce": "^3.0.1"
   },
   "devDependencies": {
-    "tailwindcss": "^3.0.23"
+      "@11ty/eleventy": "^0.11.0",
+      "@tailwindcss/forms": "^0.2.1",
+      "autoprefixer": "^10.1.0",
+      "cross-env": "^7.0.2",
+      "css-loader": "^5.0.1",
+      "cssnano": "^4.1.10",
+      "html-minifier": "^4.0.0",
+      "mini-css-extract-plugin": "^1.3.3",
+      "npm-run-all": "^4.1.5",
+      "postcss": "^8.2.1",
+      "postcss-import": "^14.0.0",
+      "postcss-loader": "^4.1.0",
+      "rimraf": "^3.0.2",
+      "sass": "^1.30.0",
+      "sass-loader": "^10.1.0",
+      "style-loader": "^2.0.0",
+      "tailwindcss": "^2.0.2",
+      "tailwindcss-debug-screens": "^2.0.0",
+      "webpack": "^5.11.0",
+      "webpack-cli": "^4.2.0",
+      "webpack-manifest-plugin": "^3.0.0"
   }
 }
