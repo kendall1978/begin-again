@@ -1,0 +1,29 @@
+ {% set links = {
+    '#megan-place': "Megan's Place",
+    '#board': 'Board of Directors'
+ }
+ %}
+ 
+ <header class="text-gray-700 bg-white border-t border-b body-font">
+    <div class="container flex justify-between p-5 mx-auto md:items-center md:flex-row ">
+        <div>
+            <h2>Begin Again Ministries, Inc</h2>
+        </div>
+        <nav class="flex flex-end text-base">
+            <div class="flex">
+                <ul class="flex py-4 space-x-5 xl:space-x-8 items-center">
+                    {% for link, title in links %}
+                        <li>
+                            <a class="mr-6 text-md font-semibold hover:text-gray-800" href="{{ link }}">{{ title }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="nav-border">
+        <div class="inner-wrapper">
+            <div class="inner"></div>
+        </div>
+    </div>
+</header>

@@ -1,18 +1,19 @@
-{% set title = 'Home' %}
-{% extends "layout.njk" %}
-
-{% block body %}
-<div class="my-20 space-y-20 md:space-y-40">
-    {% include 'sections/who-are-we.njk' %}
-</div>
-{% endblock %}
-{# {% set title = 'Home' %}
-{% extends "layout.njk" %}
-
-{% block body %}
-<div class="my-20 space-y-20 md:space-y-40">
-    {% include 'sections/who-we-are.njk' %}
-    {% include 'sections/projects.njk' %}
-    {% include 'sections/get-involved.njk' %}
-</div>
-{% endblock %} #}
+---
+title: Home
+layout: layout.njk
+---
+<section class="text-gray-700 body-font">
+    <h1 class="text-5xl text-center">Who are we?</h1>
+    <div class="flex flex-row item-center justify-even">
+        <div class="flex flex-col">
+            <p class="py-4 px-6">
+                Begin Again Ministries is a transformation program for women who are or have been affected by substance use disorders and related issues and need assistance to break free from its devastating effects
+            </p>
+        </div>
+        <div class="flex flex-col">
+            <p class="py-4 px-6">
+                Our program consists of a 90 day non-medical in-house program. We provide nonjudgement, trauma informed care that creates a healing environment that assists women in their goal to remain free of substance use.  We believe personal commitment combined with the right place and the right help is key to success.  We provide additional resources and transportation to other programs when needed
+            </p>
+        </div>
+    </div>
+</section>

@@ -1,32 +1,14 @@
 module.exports = {
-    darkMode: false,
-    theme: {
-        colors: {
-            blue: "#56A4D8",
-            darkBlue: "#133654",
-            white: "#FFFFFF",
-            meetupRed: "#E42143",
-            discordPurple: "#6D86D7"
-        },
-        fontFamily: {
-            'sans': ['Open Sans', 'sans-serif'],
-            'mono': ['Inconsolata', 'sans-serif']
-        },
-        container: {
-            center: true,
-        },
-        extend: {},
+  theme: {
+    container: {
+      center: true,
+      padding: "2rem",
     },
-    variants: {
-        extend: {},
-    },
-    plugins: [
-        require('@tailwindcss/forms'),
-        require('tailwindcss-debug-screens'),
-    ],
-    purge: [
-        './src/**/*.js',
-        './src/**/*.njk',
-        './src/**/*.svg',
-    ],
+    extend: {},
+  },
+  variants: {
+    extend: {},
+  },
+  plugins: [require("@tailwindcss/typography")],
+  purge: ["./src/**/*.js", "./src/**/*.njk", "./src/**/*.svg"],
 };
