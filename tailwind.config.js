@@ -1,4 +1,5 @@
 module.exports = {
+  darkMode: false,
   theme: {
     container: {
       center: true,
@@ -10,5 +11,5 @@ module.exports = {
     extend: {},
   },
   plugins: [require("@tailwindcss/typography")],
-  purge: ["./src/**/*.js", "./src/**/*.njk", "./src/**/*.svg"],
+  purge: ["./src/**/*.js", "./src/**/*.njk"],
 };

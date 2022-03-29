@@ -1,0 +1,50 @@
+{%
+    set directors = [
+    {
+        title: 'Chairman',
+        name: 'Edina McGinnis'
+    },
+    {
+        title: 'Vice Chairman',
+        name: 'Virgil McGinnis'
+    },
+    {
+        title: 'Secretary',
+        name: 'Jo Collins'
+    },
+    {
+        title: 'Treasurer',
+        name: 'Christina Bravata'
+    },
+    {
+        title: 'Lead Pastor Church on the Hill',
+        name: 'Beau Norman'
+    },
+    {
+        title: 'Licensed Psychologist State of Missouri',
+        name: 'Dr. Cheryl Thornton'
+    },
+    {
+        title: 'Licensed Practical Nurse, CMH Healthcare',
+        name: 'Kristina Hay'
+    }]
+%}
+
+<section class="directors">
+    <div class="anchor" id="directors"></div>
+    <div>
+        <h1 class="text-3xl text-center text-darkBlue ">
+            Board of Directors
+        </h1>
+    </div>
+    <div>
+        {% for director in directors %}
+            <div>
+                <div>
+                    <h3> {{director.name}} </h3>
+                    <h5> {{director.title}} </h5>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>

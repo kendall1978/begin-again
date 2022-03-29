@@ -1,5 +1,6 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 
 module.exports = {
   entry: "./src/_bundle/main.js",
@@ -7,18 +8,40 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.pcss$/i,
-        use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
+        test: /\.scss$/i,
+        use: [
+          MiniCssExtractPlugin.loader, {
+          loader: 'css-loader'
+          },
+          "postcss-loader",
+          "sass-loader",
+        ],
       },
     ],
   },
   output: {
     path: path.resolve(__dirname, "dist", "assets"),
-    filename: "main.bundle.js",
+    publicPath: '/assets/',
+    filename: process.env.NODE_ENV === 'production' ? '[name].[chunkhash].js' : '[name].js',
+  },
+  optimization: {
+    runtimeChunk: 'single',
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendor',
+          chunks: 'all',
+        },
+      },
+    },
   },
   plugins: [
+    new WebpackManifestPlugin({
+      basePath: '/assets/',
+    }),
     new MiniCssExtractPlugin({
-      filename: "main.bundle.css",
+      filename: process.env.NODE_ENV === 'production' ? '[name].[contenthash].css' : '[name].css',
     }),
   ],
 };

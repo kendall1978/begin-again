@@ -1,0 +1,45 @@
+{% set info = [
+    {
+        description: '90 DAY NON-MEDICAL DRUG REHAB RESIDENTIAL STAY'
+    },
+    {
+        description: 'NONJUDGEMENT, TRAUMA INFORMED, STRENTH FOCUSED'
+    },
+    {
+        description: 'AN ATMOSPHERE FOR SPIRITUAL, EMOTIONAL AND PHYSICAL HEALING'
+    },
+    {
+        description: 'COUNSELING, LIFE, & COPING SKILLS, PARENTING CLASSES, MEDICAL ACCESS'
+    },
+    {
+        description: 'SLIDING SCALE FOR PAYMENT'
+    }
+]%}
+
+<section class="text-gray-700 body-font">
+    <div class="anchor" id="megans-place"></div>
+    <div class="flex flex-col lg:flex-row lg:container px-8 xl:px-12 space-y-5">
+        {# <div class="flex flex-row justify-between">
+            <img class="block object-contain w-3/4 sm:w-1/2 lg:w-full mx-auto sm:mx-0" src="/img/get-involved-graphic.png" alt="" role="non presentation" aria-hidden="true" />
+            <h1 class="hidden sm:block lg:hidden text-darkBlue text-4xl mb-5 font-mono place-self-center mt-4" aria-hidden="true" role="none presentation">Get Involved</h1>
+        </div> #}
+        <div class="justify-center lg:justify-end place-self-center lg:w-8/12 lg:ml-40">
+            <h1 class="sm:hidden lg:block text-darkBlue text-3xl sm:text-5xl mb-5 font-mono text-center sm:text-left" id="get-involved">Megan's Place</h1>
+            <p class="mb-2">
+                Megan's Place is the name of our residential facility. A safe place for spiritual, emotional, mental, and physical healing from substance abuse and its related issues.
+                Day to day living necessities are provided. Access to substance use medical care, counseling, educational and evaluative information is available. 
+            </p>
+            <p class="mb-2">
+                Our directors have personal experiance with substance use, counseling and domestic violence. We provide nonjudgemental support and encouragement to achive your goals. 
+            </p>
+            <p class="mb-2">
+                Visit our pre owned Furniture Store! Where every purchase helps fund Megan's Place. 
+            </p>
+            <ul>
+                {% for item in info %}
+                    <li> {{ item.description }} </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</section>
